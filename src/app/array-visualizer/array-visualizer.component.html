@@ -1,0 +1,13 @@
+<div class="container">
+  <!-- Flex container containing the rectangles representing numbers in the array.
+  Flex-items are aligned to the end of the cross axis. -->
+  <div class="wrapper" #wrapper>
+    <div
+      *ngFor="let binDimension of binDimensions"
+      [style.width]="fixedWidth"
+      [style.height]="binDimension.height"
+      [attr.class]="binDimension.value"
+      [style.backgroundColor]="binDimension.color"
+    ></div>
+  </div>
+</div>

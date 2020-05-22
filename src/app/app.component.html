@@ -1,0 +1,53 @@
+<div class="container">
+  <nav>
+    <app-navigation></app-navigation>
+  </nav>
+</div>
+<div class="container instructions">
+  <p>
+    Below is a visual representation of an user controlled sized array with
+    random positive integers between 1 and 300, inclusive. Each bin represents a
+    number in the array. The taller and yellower the bin is, the closer it is to
+    300. Click on one of the sorting method above to see it in action. Of note,
+    Bubble Sort is only avaliable for an array with size less than or equal to
+    200.
+  </p>
+</div>
+<div class="button container">
+  <button class="btn" (click)="onGenerateArray()" [disabled]="optionClicked">
+    Generate Array
+  </button>
+  <!-- <div class="count">
+    <p>Number of Comparisons: {{ comparisonCount }}</p>
+    <p>Number of Array Access: {{ arrayAccessCount }}</p>
+  </div> -->
+  <div class="legend-container">
+    <div class="legend-labels">
+      <div class="legend-title">
+        <p>Color proportional to the min/max of array.</p>
+      </div>
+    </div>
+    <div class="legend-descriptions">
+      <p>1</p>
+      <div></div>
+      <p>300</p>
+    </div>
+    <div class="legend" [style.background]="linearGradientStyle"></div>
+  </div>
+</div>
+<app-arrayvis></app-arrayvis>
+<div class="container slider">
+  <label for="size">Adjust the size of the array by using the slider. </label>
+  <input
+    type="range"
+    id="size"
+    min="50"
+    max="600"
+    value="150"
+    step="50"
+    (input)="onRangeChange(slider.value)"
+    [disabled]="optionClicked"
+    #slider
+  />
+  <p>Current array size: {{ currentArraySize }}</p>
+</div>

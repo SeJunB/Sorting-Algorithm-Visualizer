@@ -1,0 +1,9 @@
+/* Utility classes used throughout the project. */
+
+/* Container used through out project */
+.container {
+  max-width: $max-width;
+  padding: 0 1rem;
+  margin: 0 auto;
+  overflow: hidden;
+}

@@ -1,0 +1,21 @@
+@import "../shared/variables";
+
+#navbar {
+  text-align: center;
+  &-title {
+    background: $navbar-color;
+    color: $main-color;
+    padding: 0.75rem 0 0.75rem 0.5rem;
+
+    /* Center icon and title */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+      display: block;
+      padding-left: 0.5rem;
+      color: $main-color;
+    }
+  }
+}
