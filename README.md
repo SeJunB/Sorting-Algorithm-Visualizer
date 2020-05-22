@@ -1,27 +1,12 @@
 # SortingAlgoVisualizer
+This is a web applications built with d3.js and Angular that visualizes bubble sort, merge sort, counting sort, and quick sort 
+on a random array with integers in the interval [1, 300]. The user is able to generate a random array by clicking the generate array 
+button. He or she is also able to adjust the size of the array using a slider.
+Of note, d3.js was used as a utility tool, specifically the d3.scale and d3.scale-chromatic modules, and did not directly modify the DOM as this would interfere with Angular's optimization. 
+Website live at: https://vigilant-sinoussi-5234de.netlify.app/
+<br/>
+**Start Date: 04/21/2020**
+<br/>
+**Completed: 05/21/2020**
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
