@@ -36,6 +36,7 @@ export class OptionsComponent implements OnInit, AfterViewInit, OnDestroy {
 
   buttonLocalRefs: ElementRef[] = [];
   validatedSubscription: Subscription;
+  sliderChangeSubscription: Subscription;
   constructor(private arrayService: ArrayService, private render: Renderer2) {}
 
   ngOnInit(): void {
@@ -76,6 +77,7 @@ export class OptionsComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnDestroy() {
     this.validatedSubscription.unsubscribe();
+    this.sliderChangeSubscription.unsubscribe();
   }
 
   ngAfterViewInit() {
@@ -87,11 +89,12 @@ export class OptionsComponent implements OnInit, AfterViewInit, OnDestroy {
     ];
   }
 
-  /** Eventhandler for when a sorting method is clicked.
-   * This method simply set the optionStatus to true which
-   * will add the active class to the selected element. Additionally,
-   * the innerText of that element is emitted to the
-   * ArrayVisualizerComponent.
+  /** Event handler when one of the four button is clicked.
+   * On click, the index corresponding to the
+   * selected button's text is passed in and it receives
+   * the active class. All other buttons are disabled.
+   * Additionally, the selected button's text is emitted
+   * to ArrayVisualizer.
    * @param element the HTML element that was clicked.
    */
   onOptionClicked(index): void {
